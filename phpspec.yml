@@ -1,0 +1,5 @@
+suites:
+  cornford_suite:
+    namespace: Illuminate3
+    src_path: src
+    spec_prefix: spec

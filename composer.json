@@ -1,0 +1,29 @@
+{
+    "name": "illuminate3/bootawesome",
+    "type": "library",
+    "description": "An easy way to intergrate Twitter Bootstrap with Laravel 4.",
+    "keywords": ["laravel", "bootstrap", "twitter", "form", "fontawesome", "views", "templates"],
+    "license": "MIT",
+    "homepage": "https://github.com/Illuminate3/vedette",
+    "authors": [
+        {
+            "name": "Illuminate3",
+            "email": "carsten.sapporo@gmail.com",
+            "homepage": "https://github.com/illuminate3/bootawesome",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev",
+        "mockery/mockery": "~0.9.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Illuminate3\\BootAwesome": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
