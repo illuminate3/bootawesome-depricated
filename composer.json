@@ -4,12 +4,11 @@
     "description": "An easy way to intergrate Twitter Bootstrap with Laravel 4.",
     "keywords": ["laravel", "bootstrap", "twitter", "form", "fontawesome", "views", "templates"],
     "license": "MIT",
-    "homepage": "https://github.com/Illuminate3/vedette",
+    "homepage": "https://github.com/Illuminate3/bootawesome",
     "authors": [
         {
             "name": "Illuminate3",
             "email": "carsten.sapporo@gmail.com",
-            "homepage": "https://github.com/illuminate3/bootawesome",
             "role": "Developer"
         }
     ],
