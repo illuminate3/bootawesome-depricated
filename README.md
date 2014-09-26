@@ -85,10 +85,10 @@ It's really as simple as using the Bootstrap class in any Controller / Model / F
 
 This will give you access to
 
-- [CSS-BOOT](#css-boot)
-- [CSS-FONT](#css-font)
-- [JS-1X](#js-1x)
-- [JS-2X](#js-2X)
+- [CSS-BOOT](#cssBoot)
+- [CSS-FONT](#cssFont)
+- [JS-1X](#js1x)
+- [JS-2X](#js2X)
 - [Vertical](#vertical)
 - [Horizontal](#horizontal)
 - [Inline](#inline)
@@ -121,29 +121,29 @@ This will give you access to
 
 The `css-boot` method includes Bootstrap CSS via either a CDN / Local file, and pass optional attributes.
 
-	Bootstrap::css-boot();
-	Bootstrap::css-boot('local', ['type' => 'text/css']);
+	Bootstrap::cssBoot();
+	Bootstrap::cssBoot('local', ['type' => 'text/css']);
 
 ### CSS-FONT
 
 The `css-font` method includes Bootstrap CSS via either a CDN / Local file, and pass optional attributes.
 
-	Bootstrap::css-font();
-	Bootstrap::css-font('local', ['type' => 'text/css']);
+	Bootstrap::cssFont();
+	Bootstrap::cssFont('local', ['type' => 'text/css']);
 
 ### JS-1X
 
 The `js-1x` method includes Bootstrap JS via either a CDN / Local file, and pass optional attributes.
 
-	Bootstrap::js-1x();
-	Bootstrap::js-1x('local', ['type' => 'text/javascript']);
+	Bootstrap::js1x();
+	Bootstrap::js1x('local', ['type' => 'text/javascript']);
 
 ### JS-2X
 
 The `js-2x` method includes Bootstrap JS via either a CDN / Local file, and pass optional attributes.
 
-	Bootstrap::js-2x();
-	Bootstrap::js-2x('local', ['type' => 'text/javascript']);
+	Bootstrap::js2x();
+	Bootstrap::js2x('local', ['type' => 'text/javascript']);
 
 ### Vertical
 
