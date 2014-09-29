@@ -230,12 +230,13 @@ abstract class BootstrapBase {
 	 * @param string                         $value
 	 * @param string                         $label
 	 * @param \Illuminate\Support\MessageBag $errors
+	 * @param string                         $icon (do not use the first fa)
 	 * @param array                          $options
 	 * @param array                          $parameters
 	 *
 	 * @return string
 	 */
-	protected function input($type = 'text', $name, $label = null, $value = null, $errors = null, array $options = array(), array $parameters = array())
+	protected function input($type = 'text', $name, $label = null, $value = null, $errors = null, $icon = null, array $options = array(), array $parameters = array())
 	{
 		$options = array_merge(array('class' => 'form-control', 'placeholder' => $label), $options);
 
@@ -276,13 +277,33 @@ abstract class BootstrapBase {
 				break;
 			case 'password':
 			case 'file':
-				$return .= $this->form->$type($name, $options) . "\n";
+
+				if ( is_null($icon) ) {
+					$return .= $this->form->$type($name, $options) . "\n";
+				} else {
+					$return .= '<div class="input-group">' . "\n";
+					$return .= '<span class="input-group-addon"><i class="fa ' . $icon . '"></i></span>' . "\n";
+					$return .= $this->form->$type($name, $options) . "\n";
+					$return .= '</div>' . "\n";
+				}
+
+//				$return .= $this->form->$type($name, $options) . "\n";
 				break;
 			case 'text':
 			case 'hidden':
 			case 'email':
 			case 'textarea':
-				$return .= $this->form->$type($name, $value, $options) . "\n";
+
+				if ( is_null($icon) ) {
+					$return .= $this->form->$type($name, $value, $options) . "\n";
+				} else {
+					$return .= '<div class="input-group">' . "\n";
+					$return .= '<span class="input-group-addon"><i class="fa ' . $icon . '"></i></span>' . "\n";
+					$return .= $this->form->$type($name, $value, $options) . "\n";
+					$return .= '</div>' . "\n";
+				}
+
+//				$return .= $this->form->$type($name, $value, $options) . "\n";
 				break;
 			default:
 				$return .= $this->form->input($type, $name, $value, $options) . "\n";

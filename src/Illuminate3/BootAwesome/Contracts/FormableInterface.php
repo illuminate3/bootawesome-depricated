@@ -13,7 +13,7 @@ interface FormableInterface {
 	 *
 	 * @return string
 	 */
-	public function text($name, $label = null, $value = null, $errors = null, array $options = array());
+	public function text($name, $label = null, $value = null, $errors = null, $icon = null, array $options = array());
 
 	/**
 	 * Create a form password field.
@@ -25,7 +25,7 @@ interface FormableInterface {
 	 *
 	 * @return string
 	 */
-	public function password($name, $label = null, $errors = null, array $options = array());
+	public function password($name, $label = null, $errors = null, $icon = null, array $options = array());
 
 	/**
 	 * Create a form email field.
@@ -38,7 +38,7 @@ interface FormableInterface {
 	 *
 	 * @return string
 	 */
-	public function email($name, $label = null, $value = null, $errors = null, array $options = array());
+	public function email($name, $label = null, $value = null, $errors = null, $icon = null, array $options = array());
 
 	/**
 	 * Create a form file field.
@@ -105,7 +105,7 @@ interface FormableInterface {
 	 *
 	 * @return string
 	 */
-	public function textarea($name, $label = null, $value = null, $errors = null, array $options = array());
+	public function textarea($name, $label = null, $value = null, $errors = null, $icon = null, array $options = array());
 
 	/**
 	 * Create a form select field.

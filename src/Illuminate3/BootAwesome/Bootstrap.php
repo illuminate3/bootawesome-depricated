@@ -133,13 +133,14 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 	 * @param string                         $label
 	 * @param string                         $value
 	 * @param \Illuminate\Support\MessageBag $errors
+	 * @param  string                        $icon (do not use the first fa)
 	 * @param array                          $options
 	 *
 	 * @return string
 	 */
-	public function text($name, $label = null, $value = null, $errors = null, array $options = array())
+	public function text($name, $label = null, $value = null, $errors = null, $icon = null, array $options = array())
 	{
-		return $this->input('text', $name, $label, $value, $errors, $options);
+		return $this->input('text', $name, $label, $value, $errors, $icon, $options);
 	}
 
 	/**
@@ -148,13 +149,14 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 	 * @param string                         $name
 	 * @param string                         $label
 	 * @param \Illuminate\Support\MessageBag $errors
+	 * @param  string                        $icon (do not use the first fa)
 	 * @param array                          $options
 	 *
 	 * @return string
 	 */
-	public function password($name, $label = null, $errors = null, array $options = array())
+	public function password($name, $label = null, $errors = null, $icon = null, array $options = array())
 	{
-		return $this->input('password', $name, $label, null, $errors, $options);
+		return $this->input('password', $name, $label, null, $errors, $icon, $options);
 	}
 
 	/**
@@ -164,13 +166,15 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 	 * @param string                         $label
 	 * @param string                         $value
 	 * @param \Illuminate\Support\MessageBag $errors
+	 * @param  string                        $icon (do not use the first fa)
 	 * @param array                          $options
 	 *
 	 * @return string
 	 */
-	public function email($name, $label = null, $value = null, $errors = null, array $options = array())
+	public function email($name, $label = null, $value = null, $errors = null, $icon = null, array $options = array())
 	{
-		return $this->input('email', $name, $label, $value, $errors, $options);
+
+		return $this->input('email', $name, $label, $value, $errors, $icon, $options);
 	}
 
 	/**
@@ -246,13 +250,14 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 	 * @param string                         $label
 	 * @param string                         $value
 	 * @param \Illuminate\Support\MessageBag $errors
+	 * @param  string                        $icon (do not use the first fa)
 	 * @param array                          $options
 	 *
 	 * @return string
 	 */
-	public function textarea($name, $label = null, $value = null, $errors = null, array $options = array())
+	public function textarea($name, $label = null, $value = null, $errors = null, $icon = null, array $options = array())
 	{
-		return $this->input('textarea', $name, $label, $value, $errors, $options);
+		return $this->input('textarea', $name, $label, $value, $errors, $icon, $options);
 	}
 
 	/**
@@ -498,6 +503,7 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 	 *
 	 * @param  string  $url
 	 * @param  string  $title
+	 * @param  string  $icon (do not use the first fa)
 	 * @param  array   $attributes
 	 * @param  bool    $secure
 	 * @return string

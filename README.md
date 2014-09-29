@@ -34,6 +34,7 @@ Think of Bootstrap as an easy way to integrate Bootstrap with Laravel 4, providi
 - `Bootstrap::secureLink`
 - `Bootstrap::linkRoute`
 - `Bootstrap::linkAction`
+- `Bootstrap::linkIcon`
 - `Bootstrap::mailto`
 - `Bootstrap::none`
 - `Bootstrap::success`
@@ -110,6 +111,7 @@ This will give you access to
 - [Secure Link](#secure-link)
 - [Link Route](#link-route)
 - [Link Action](#link-action)
+- [Link Icon](#link-Icon)
 - [Mailto](#mailto)
 - [None Alert](#none-alert)
 - [Success Alert](#success-alert)
@@ -171,19 +173,19 @@ The inline method can be chained before any form element is added and will conti
 
 ### Text
 
-The `text` method generates a text field with an optional label, from errors and options.
+The `text` method generates a text field with an optional label and Font Awesome icon, from errors and options.
 
 	Bootstrap::text('text', 'Text', 'Value', $errors);
 
 ### Password
 
-The `password` method generates a password field with an optional label, from errors and options.
+The `password` method generates a password field with an optional label and Font Awesome icon, from errors and options.
 
 	Bootstrap::password('password', 'Password');
 
 ### Email
 
-The `email` method generates an email field with an optional label, from errors and options.
+The `email` method generates an email field with an optional label and Font Awesome icon, from errors and options.
 
 	Bootstrap::email('email', 'Email address', 'Value');
 
@@ -216,7 +218,7 @@ The `time` method generates a date field with a time picker, with an optional la
 
 ### Textarea
 
-The `textarea` method generates a textarea field with an optional label, from errors and options.
+The `textarea` method generates a textarea field with an optional label and Font Awesome icon, from errors and options.
 
 	Bootstrap::textarea('file', 'File', 'Value');
 
@@ -279,6 +281,12 @@ The `linkRoute` method generates a link button with a route, title and optional 
 The `linkAction` method generates a link button with an action, title and optional parameters, attributes.
 
 	Bootstrap::linkAction('index', 'Home');
+
+### Link Icon
+
+The `linkIcon` method generates a link button with a url, title, Font Awesome icon and optional attributes and secure link. You do not need the Font Awesome "fa" prefix, just use the icon name and it's size.
+
+	Bootstrap::linkIcon('/', 'Link', 'fa-flag fa-fw');
 
 ### Mailto
 
