@@ -5,7 +5,17 @@ use Illuminate3\BootAwesome\Contracts\FormableInterface;
 use Illuminate3\BootAwesome\Contracts\LinkableInterface;
 use Illuminate3\BootAwesome\Contracts\AlertableInterface;
 
+use HTML;
+use URL;
+
 class Bootstrap extends BootstrapBase implements IncludableInterface, FormableInterface, LinkableInterface, AlertableInterface {
+
+/*
+	public function __construct(Illuminate\Routing\UrlGenerator $url = null)
+	{
+		$this->url = $url;
+	}
+*/
 
 	/**
 	 * Include the Bootstrap CDN / Local CSS file
@@ -480,6 +490,29 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 	public function danger($content = null, $emphasis = null, $dismissible = false, array $attributes = array())
 	{
 		return $this->alert('danger', $content, $emphasis, $dismissible, $attributes);
+	}
+
+
+	/**
+	 * Generate a HTML link.
+	 *
+	 * @param  string  $url
+	 * @param  string  $title
+	 * @param  array   $attributes
+	 * @param  bool    $secure
+	 * @return string
+	 */
+	public function linkIcon($url, $title = null, $icon = null, $attributes = array(), $secure = null)
+	{
+		$url = URL::route($url, array(), $secure);
+		if (is_null($title) || $title === false) $title = $url;
+
+		return '<a href="'.$url.'"'
+		.HTML::attributes($attributes)
+		. 'title="' . $title . '">
+		<i class="fa ' . $icon . '"></i>'
+		.HTML::entities($title)
+		.'</a>';
 	}
 
 }

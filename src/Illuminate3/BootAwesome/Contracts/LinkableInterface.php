@@ -50,6 +50,18 @@ interface LinkableInterface {
 	 */
 	public function linkAction($action, $title = null, array $parameters = array(), array $attributes = array());
 
+
+	/**
+	 * Generate a HTML link.
+	 *
+	 * @param  string  $url
+	 * @param  string  $title
+	 * @param  array   $attributes
+	 * @param  bool    $secure
+	 * @return string
+	 */
+	public function linkIcon($url, $title = null, $icon = null, $attributes = array(), $secure = null);
+
 	/**
 	 * Create a button link to an email address.
 	 *

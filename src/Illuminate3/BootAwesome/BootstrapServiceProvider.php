@@ -33,7 +33,8 @@ class BootstrapServiceProvider extends ServiceProvider {
 			return new Bootstrap(
 				$this->app->make('Illuminate\Html\FormBuilder'),
 				$this->app->make('Illuminate\Html\HtmlBuilder'),
-				$this->app->make('Illuminate\Http\Request')
+				$this->app->make('Illuminate\Http\Request'),
+				$this->app->make('Illuminate\Routing\UrlGenerator')
 			);
 		});
 	}
