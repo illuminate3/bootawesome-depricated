@@ -286,7 +286,7 @@ The `linkAction` method generates a link button with an action, title and option
 
 The `linkIcon` method generates a link button with a url, title, Font Awesome icon and optional attributes and secure link. You do not need the Font Awesome "fa" prefix, just use the icon name and it's size.
 
-	Bootstrap::linkIcon('/', 'Link', 'fa-flag fa-fw');
+	Bootstrap::linkIcon('/', 'Link', 'flag fa-fw');
 
 ### Mailto
 

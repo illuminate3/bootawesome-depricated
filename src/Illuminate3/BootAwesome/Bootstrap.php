@@ -516,7 +516,7 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 		return '<a href="'.$url.'"'
 		.HTML::attributes($attributes)
 		. 'title="' . $title . '">
-		<i class="fa ' . $icon . '"></i>'
+		<i class="fa fa-' . $icon . '"></i>'
 		.HTML::entities($title)
 		.'</a>';
 	}

@@ -282,7 +282,7 @@ abstract class BootstrapBase {
 					$return .= $this->form->$type($name, $options) . "\n";
 				} else {
 					$return .= '<div class="input-group">' . "\n";
-					$return .= '<span class="input-group-addon"><i class="fa ' . $icon . '"></i></span>' . "\n";
+					$return .= '<span class="input-group-addon"><i class="fa fa-' . $icon . '"></i></span>' . "\n";
 					$return .= $this->form->$type($name, $options) . "\n";
 					$return .= '</div>' . "\n";
 				}
@@ -298,7 +298,7 @@ abstract class BootstrapBase {
 					$return .= $this->form->$type($name, $value, $options) . "\n";
 				} else {
 					$return .= '<div class="input-group">' . "\n";
-					$return .= '<span class="input-group-addon"><i class="fa ' . $icon . '"></i></span>' . "\n";
+					$return .= '<span class="input-group-addon"><i class="fa fa-' . $icon . '"></i></span>' . "\n";
 					$return .= $this->form->$type($name, $value, $options) . "\n";
 					$return .= '</div>' . "\n";
 				}
