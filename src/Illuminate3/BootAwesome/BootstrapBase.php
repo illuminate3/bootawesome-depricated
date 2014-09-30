@@ -371,6 +371,8 @@ abstract class BootstrapBase {
 	{
 		$return = '';
 
+//dd($type);
+
 		if ($this->formType != self::FORM_INLINE) {
 			$return .= $this->group($name, null);
 		}
@@ -380,8 +382,15 @@ abstract class BootstrapBase {
 		}
 
 		$return .= '<div class="' . $type . '">' . "\n";
-		$return .= $this->label($name, $label);
-		$return .= $this->form->$type($name, $value, $checked, $options) . "\n";
+		if ( $type == 'checkbox' ) {
+				$return .= '<label>' . "\n";
+				$return .= $this->form->$type($name, $value, $checked, $options) . "\n";
+				$return .= '&nbsp;' . $label . "\n";
+				$return .= '</label>' . "\n";
+		} else {
+				$return .= $this->label($name, $label);
+				$return .= $this->form->$type($name, $value, $checked, $options) . "\n";
+		}
 		$return .= '</div>' . "\n";
 
 		if ($this->formType == self::FORM_HORIZONTAL) {
