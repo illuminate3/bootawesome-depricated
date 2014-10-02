@@ -497,6 +497,10 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 		return $this->alert('danger', $content, $emphasis, $dismissible, $attributes);
 	}
 
+	public function titleModal($id, $label, $title, $route, $method, $close, $button)
+	{
+		return $this->modal($id, $label, $title, $route, $method, $close, $button);
+	}
 
 	/**
 	 * Generate a HTML link.
