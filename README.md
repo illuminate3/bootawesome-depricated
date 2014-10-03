@@ -107,17 +107,20 @@ This will give you access to
 - [Submit](#submit)
 - [Button](#button)
 - [Reset](#reset)
+- [modalButton](#modalButton)
 - [Link](#link)
 - [Secure Link](#secure-link)
 - [Link Route](#link-route)
 - [Link Action](#link-action)
 - [Link Icon](#link-Icon)
+- [Link Icon Route](#link-Icon-Route)
 - [Mailto](#mailto)
 - [None Alert](#none-alert)
 - [Success Alert](#success-alert)
 - [Info Alert](#info-alert)
 - [Warning Alert](#warning-alert)
 - [Danger Alert](#danger-alert)
+- [Full Modal](#fullModal)
 
 ### CSS-BOOT
 
@@ -258,6 +261,12 @@ The `reset` method generates a reset button with a value and optional attributes
 
 	Bootstrap::reset('Reset');
 
+### modalButton
+
+The `modalButton` method generates a button with a value and optional attributes.
+
+	Bootstrap::modalButton('Submit');
+
 ### Link
 
 The `link` method generates a link button with a url, title and optional attributes and secure link.
@@ -285,6 +294,12 @@ The `linkAction` method generates a link button with an action, title and option
 ### Link Icon
 
 The `linkIcon` method generates a link button with a url, title, Font Awesome icon and optional attributes and secure link. You do not need the Font Awesome "fa" prefix, just use the icon name and it's size.
+
+	Bootstrap::linkIcon('/', 'Link', 'flag fa-fw');
+
+### Link Icon Route
+
+The `linkIconRoute` method generates a link button with a url, title, Font Awesome icon and optional attributes and secure link. You do not need the Font Awesome "fa" prefix, just use the icon name and it's size.
 
 	Bootstrap::linkIcon('/', 'Link', 'flag fa-fw');
 
@@ -323,6 +338,30 @@ The `warning` method generates a warning alert with content with optional emphas
 The `danger` method generates a danger alert with content with optional emphasis, optionally be dismissible, and optional attributes.
 
 	Bootstrap::danger('A danger message', 'Oh snap!', true);
+
+### Full Modal
+
+The `fullModal` method generates a modal alert with content with optional emphasis, optionally be dismissible, and optional attributes.
+
+	Bootstrap::fullModal('A modal message', 'Oh snap!', submit);
+
+```
+{{ Bootstrap::modalButton(
+	trans('lingos::button.delete'),
+	array(
+		'class' => 'btn btn-danger',
+		'data-toggle' => 'modal',
+		'data-target' => '#delete-' . $user->id,
+	)
+) }}
+
+{{ Bootstrap::fullModal(
+$user->id, 'myModal', 'title', 'admin.users.destroy', 'delete', 'delete', 'close', 'button'
+) }}
+```
+
+
+
 
 ### License
 

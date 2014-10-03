@@ -39,6 +39,19 @@ interface LinkableInterface {
 	public function linkRoute($name, $title = null, array $parameters = array(), array $attributes = array());
 
 	/**
+	 * Create a button link to route.
+	 *
+	 * @param string $name
+	 * @param string $title
+	 * @param  string  $icon
+	 * @param array  $parameters
+	 * @param array  $attributes
+	 *
+	 * @return string
+	 */
+	public function linkRouteIcon($name, $title = null, $icon = null, array $parameters = array(), array $attributes = array());
+
+	/**
 	 * Create a button link to action.
 	 *
 	 * @param string $action
@@ -56,6 +69,7 @@ interface LinkableInterface {
 	 *
 	 * @param  string  $url
 	 * @param  string  $title
+	 * @param  string  $icon
 	 * @param  array   $attributes
 	 * @param  bool    $secure
 	 * @return string

@@ -5,6 +5,7 @@ namespace Illuminate3\BootAwesome;
 use Illuminate\Html\FormBuilder;
 use Illuminate\Html\HtmlBuilder;
 use Illuminate\Http\Request;
+use Form;
 
 abstract class BootstrapBase {
 
@@ -514,103 +515,34 @@ abstract class BootstrapBase {
 	/**
 	 * Create a modal item
 	 *
-	 * @param string  $type
+	 * @param string  $id
+	 * @param string  $label
+	 * @param string  $title
+	 * @param string  $route
 	 * @param string  $content
-	 * @param string  $emphasis
-	 * @param boolean $dismissible
-	 * @param array   $attributes
+	 * @param string  $close
+	 * @param string  $button
 	 *
 	 * @return string
 	 */
-
-/*
-	protected function modal($type = 'message', $content = null, $emphasis = null, $dismissible = false, array $attributes = array())
+	protected function modal($id, $label, $title, $route, $method, $content, $close, $button)
 	{
-		$class = '';
+		$return = '<div class="modal fade" id="' . $method . '-' . $id . '" tabindex="-1" role="dialog" aria-labelledby="' . $label . '" aria-hidden="true">' . "\n";
+		$return .= '<div class="modal-dialog"><div class="modal-content"><div class="modal-header">' . "\n";
+		$return .= '<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">' . $close . '</span></button>' . "\n";
+		$return .= '<h4 class="modal-title">' . $title . '</h4></div>' . "\n";
+		$return .= '<div class="modal-body"><p>' . "\n";
+		$return .= $content . "\n";
+		$return .= '</p></div>' . "\n";
+		$return .= '<div class="modal-footer">' . "\n";
+		$return .= Form::open(array('route' => array($route, $id), 'role' => 'form', 'method' => $method, 'class' => 'form-inline')) . "\n";
+		$return .= '<button type="button" class="btn btn-default" data-dismiss="modal">' . $close . '</button>' . "\n";
+		$return .= '<button type="submit" class="btn btn-primary">' . $button . '</button>' . "\n";
+		$return .= Form::close() . "\n";
+		$return .= '</div></div><!-- /.modal-content --></div><!-- /.modal-dialog -->' . "\n";
+		$return .= '</div><!-- /.modal -->' . "\n";
 
-		if($emphasis && is_string($emphasis)){
-			$content = '<strong>' . $emphasis . '</strong> ' . $content;
-		}
-
-		if ($dismissible) {
-			$class = 'alert-dismissable';
-		}
-
-		$attributes = array_merge(array('class' => 'alert ' . $class . ' alert-' . ($type != 'message' ? $type : 'default')), $attributes);
-		$return = '<div ' . $this->html->attributes($attributes) . '>';
-
-		if ($dismissible) {
-			$return .= '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
-		}
-
-		$return .= $content . '</div>';
-
-		return $return;
-*/
-
-protected function modal($id, $label, $title, $route, $method, $close, $button)
-{
-
-//dd($id);
-
-//$content
-
-$return = '<div class="modal fade" id="' . $method . '-' . $label. '-' . $id . '" tabindex="-1" role="dialog" aria-labelledby="' . $label . '" aria-hidden="true">' . "\n";
-$return .= '<div class="modal-dialog"><div class="modal-content"><div class="modal-header">' . "\n";
-$return .= '<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">' . $close . '</span></button>' . "\n";
-$return .= '<h4 class="modal-title">' . $title . '</h4></div>' . "\n";
-$return .= '<div class="modal-body"><p>' . "\n";
-
-$return .= "{{ Form::open(array('route' => array('" . $route . "', '" . $id . "'), 'role' => 'form','method' => '" . $method . "','class' => 'form-inline')) }}" . "\n";
-
-//. $content .
-
-$return .= '</p></div>' . "\n";
-$return .= '<div class="modal-footer">' . "\n";
-$return .= '<button type="button" class="btn btn-default" data-dismiss="modal">' . $close . '</button>' . "\n";
-$return .= '<button type="button" class="btn btn-primary">' . $button . '</button>' . "\n";
-$return .= '</div></div><!-- /.modal-content --></div><!-- /.modal-dialog -->' . "\n";
-$return .= '</div><!-- /.modal -->' . "\n";
-
-		return $return;
-
-
-/*
-
-<div class="modal fade delete-user-modal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" >
-<div class="modal-dialog">
-	<div class="modal-content">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h4 class="modal-title">Delete User</h4>
-		</div>
-		<div class="modal-body">
-			<p>Delete the user: <strong>{{ $user->email }}</strong>?</p>
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-			&nbsp;
-							{{ Form::open(array(
-								'route' => array('admin.users.destroy', $user->id),
-								'role' => 'form',
-								'method' => 'delete',
-								'class' => 'form-inline'
-							)) }}
-				{{ Form::submit('Delete', array('class' => 'btn btn-primary')) }}
-			{{ Form::close() }}
-		</div>
-	</div>
-</div>
-
-*/
-
-
-
-
-
-
-
-
+	return $return;
 	}
 
 }

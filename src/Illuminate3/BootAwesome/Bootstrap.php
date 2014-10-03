@@ -336,6 +336,19 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 	}
 
 	/**
+	 * Create a form button.
+	 *
+	 * @param string $value
+	 * @param array  $attributes
+	 *
+	 * @return string
+	 */
+	public function modalButton($value, array $attributes = array())
+	{
+		return $this->action('submit', $value, $attributes);
+	}
+
+	/**
 	 * Create a form reset button.
 	 *
 	 * @param string $value
@@ -497,9 +510,22 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 		return $this->alert('danger', $content, $emphasis, $dismissible, $attributes);
 	}
 
-	public function titleModal($id, $label, $title, $route, $method, $close, $button)
+	/**
+	 * Create a button for a modal
+	 *
+	 * @param string  $id
+	 * @param string  $label
+	 * @param string  $title
+	 * @param string  $route
+	 * @param string  $content
+	 * @param string  $close
+	 * @param string  $button
+	 *
+	 * @return string
+	 */
+	public function fullModal($id, $label, $title, $route, $method, $content, $close, $button)
 	{
-		return $this->modal($id, $label, $title, $route, $method, $close, $button);
+		return $this->modal($id, $label, $title, $route, $method, $content, $close, $button);
 	}
 
 	/**
@@ -523,6 +549,41 @@ class Bootstrap extends BootstrapBase implements IncludableInterface, FormableIn
 		<i class="fa fa-' . $icon . '"></i>'
 		.HTML::entities($title)
 		.'</a>';
+	}
+
+	/**
+	 * Create a button link to route.
+	 *
+	 * @param string $name
+	 * @param string $title
+	 * @param array  $parameters
+	 * @param array  $attributes
+	 *
+	 * @return string
+	 */
+	public function linkRouteIcon($name, $title = null, $icon = null, array $parameters = array(), array $attributes = array())
+	{
+/*
+<a href="{{ route('admin.users.destroy', array($user->id)) }}"
+	class="btn btn-danger form-group action_confirm"
+	data-method="delete"
+	title="{{ trans('lingos::account.command.delete') }}">
+	<i class="fa fa-trash-o"></i>
+	{{ trans('lingos::button.delete') }}
+</a>
+*/
+//		return $this->hyperlink('linkRoute', $name, $title, $parameters, $attributes, null);
+
+		$url = URL::route($name, $parameters);
+		if (is_null($title) || $title === false) $title = $url;
+
+		return '<a href="'.$url.'"'
+		.HTML::attributes($attributes)
+		. 'title="' . $title . '">
+		<i class="fa fa-' . $icon . '"></i>'
+		.HTML::entities($title)
+		.'</a>';
+
 	}
 
 }

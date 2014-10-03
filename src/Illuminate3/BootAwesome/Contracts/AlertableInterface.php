@@ -62,7 +62,7 @@ interface AlertableInterface {
 	 */
 	public function danger($content = null, $emphasis = null, $dismissible = false, array $attributes = array());
 
-public function titleModal($id, $label, $title, $route, $method, $close, $button);
+	public function fullModal($id, $label, $title, $route, $method, $content, $close, $button);
 
 
 

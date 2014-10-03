@@ -177,4 +177,14 @@ interface FormableInterface {
 	 */
 	public function reset($value, array $attributes = array());
 
+	/**
+	 * Create a form button.
+	 *
+	 * @param string $value
+	 * @param array  $attributes
+	 *
+	 * @return string
+	 */
+	public function modalButton($value, array $attributes = array());
+
 }
