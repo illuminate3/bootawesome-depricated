@@ -14,31 +14,31 @@ abstract class BootstrapBase {
 	const FORM_INLINE = 'inline';
 
 	const CSS_BOOTSTRAP_CDN = '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css';
-	const CSS_BOOTSTRAP_LOCAL = 'assets/css/bootstrap.min.css';
-	const CSS_BOOTSTRAP_MAP_LOCAL = 'assets/css/bootstrap.css.map';
+	const CSS_BOOTSTRAP_LOCAL = 'packages/illuminate3/bootawesome/assets/css/bootstrap.min.css';
+	const CSS_BOOTSTRAP_MAP_LOCAL = 'packages/illuminate3/bootawesome/assets/css/bootstrap.css.map';
 
 	const JS_BOOTSTRAP_CDN = '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js';
-	const JS_BOOTSTRAP_LOCAL = 'assets/js/bootstrap.min.js';
+	const JS_BOOTSTRAP_LOCAL = 'packages/illuminate3/bootawesome/assets/js/bootstrap.min.js';
 
 	const CSS_FONTAWESOME_CDN = '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css';
-	const CSS_FONTAWESOME_LOCAL = 'assets/css/font-awesome.min.min.css';
+	const CSS_FONTAWESOME_LOCAL = 'packages/illuminate3/bootawesome/assets/css/font-awesome.min.min.css';
 
 	const JS_JQUERY_1x_CDN = '//code.jquery.com/jquery-1.11.1.min.js';
-	const JS_JQUERY_1x_LOCAL = 'assets/js/jquery-1.11.1.min.js';
-	const JS_JQUERY_1x_MAP_LOCAL = 'assets/js/jquery-1.11.1.min.js.map';
+	const JS_JQUERY_1x_LOCAL = 'packages/illuminate3/bootawesome/assets/js/jquery-1.11.1.min.js';
+	const JS_JQUERY_1x_MAP_LOCAL = 'packages/illuminate3/bootawesome/assets/js/jquery-1.11.1.min.js.map';
 
 	const JS_JQUERY_2x_CDN = '//code.jquery.com/jquery-1.11.1.min.js';
-	const JS_JQUERY_2x_LOCAL = 'assets/js/jquery-2.1.1.min.js';
-	const JS_JQUERY_2x_MAP_LOCAL = 'assets/js/jquery-2.1.1.min.js.map';
+	const JS_JQUERY_2x_LOCAL = 'packages/illuminate3/bootawesome/assets/js/jquery-2.1.1.min.js';
+	const JS_JQUERY_2x_MAP_LOCAL = 'packages/illuminate3/bootawesome/assets/js/jquery-2.1.1.min.js.map';
 
 	const JS_MOMENT_CDN = '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js';
-	const JS_MOMENT_LOCAL = 'assets/js/moment.min.js';
+	const JS_MOMENT_LOCAL = 'packages/illuminate3/bootawesome/assets/js/moment.min.js';
 
 	const JS_DATETIME_CDN = '//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js';
-	const JS_DATETIME_LOCAL = 'assets/js/bootstrap-datetimepicker.min.js';
+	const JS_DATETIME_LOCAL = 'packages/illuminate3/bootawesome/assets/js/bootstrap-datetimepicker.min.js';
 
 	const CSS_DATETIME_CDN = '//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/css/bootstrap-datetimepicker.min.css';
-	const CSS_DATETIME_LOCAL = 'assets/css/bootstrap-datetimepicker.min.css';
+	const CSS_DATETIME_LOCAL = 'packages/illuminate3/bootawesome/assets/css/bootstrap-datetimepicker.min.css';
 
 	/**
 	 * Form
