@@ -21,7 +21,7 @@ abstract class BootstrapBase {
 	const JS_BOOTSTRAP_LOCAL = 'packages/illuminate3/bootawesome/assets/js/bootstrap.min.js';
 
 	const CSS_FONTAWESOME_CDN = '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css';
-	const CSS_FONTAWESOME_LOCAL = 'packages/illuminate3/bootawesome/assets/css/font-awesome.min.min.css';
+	const CSS_FONTAWESOME_LOCAL = 'packages/illuminate3/bootawesome/assets/css/font-awesome.min.css';
 
 	const JS_JQUERY_1x_CDN = '//code.jquery.com/jquery-1.11.1.min.js';
 	const JS_JQUERY_1x_LOCAL = 'packages/illuminate3/bootawesome/assets/js/jquery-1.11.1.min.js';
